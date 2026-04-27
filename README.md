@@ -84,7 +84,7 @@ The Markdown summary also lists human-review items and follow-up details.
 - simple deterministic keyword/regex analysis
 - not production-ready
 - not integrated into Meridian runtime yet
-- companion proof artifact only
+- companion proof artefact only
 
 ## What I Am Learning
 
