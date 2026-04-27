@@ -1,0 +1,217 @@
+[
+  {
+    "id": "ENQ-001",
+    "source": "Instagram DM",
+    "original_text": "Do you do coffee and pastries for a small event next Friday? Around 25 people.",
+    "category": "hospitality",
+    "interest_area": "event coffee",
+    "missing_details": [
+      "time",
+      "location",
+      "contact details",
+      "collection/delivery preference",
+      "dietary requirements"
+    ],
+    "human_review_required": false,
+    "review_reason": "standard enquiry",
+    "human_owner": "hospitality owner",
+    "suggested_next_step": "confirm event or booking details before replying",
+    "owner_note": "Prepare a standard reply. Interest area: event coffee. Missing details: time, location, contact details, collection/delivery preference, dietary requirements.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-002",
+    "source": "Website form",
+    "original_text": "Can I book a table for four this Saturday evening at about 7pm?",
+    "category": "hospitality",
+    "interest_area": "table booking",
+    "missing_details": [
+      "contact details",
+      "collection/delivery preference",
+      "dietary requirements"
+    ],
+    "human_review_required": false,
+    "review_reason": "standard enquiry",
+    "human_owner": "hospitality owner",
+    "suggested_next_step": "confirm event or booking details before replying",
+    "owner_note": "Prepare a standard reply. Interest area: table booking. Missing details: contact details, collection/delivery preference, dietary requirements.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-003",
+    "source": "Email",
+    "original_text": "We need catering for a corporate lunch near Meridian House. Can I get a quote for 40 people?",
+    "category": "hospitality",
+    "interest_area": "pricing / quote",
+    "missing_details": [
+      "date",
+      "time",
+      "contact details",
+      "collection/delivery preference",
+      "dietary requirements"
+    ],
+    "human_review_required": true,
+    "review_reason": "pricing / quote requested",
+    "human_owner": "hospitality owner",
+    "suggested_next_step": "confirm event or booking details before replying",
+    "owner_note": "Route to hospitality owner. Interest area: pricing / quote. Reason: pricing / quote requested. Missing details: date, time, contact details, collection/delivery preference, dietary requirements.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-004",
+    "source": "Phone note",
+    "original_text": "Can I order two celebration cakes and collect them on Friday morning? One needs to be gluten free.",
+    "category": "hospitality",
+    "interest_area": "general enquiry",
+    "missing_details": [
+      "headcount",
+      "contact details"
+    ],
+    "human_review_required": false,
+    "review_reason": "standard enquiry",
+    "human_owner": "hospitality owner",
+    "suggested_next_step": "confirm event or booking details before replying",
+    "owner_note": "Prepare a standard reply. Interest area: general enquiry. Missing details: headcount, contact details.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-005",
+    "source": "Instagram DM",
+    "original_text": "I saw your PRP post for thinning hair. Can you guarantee it will work?",
+    "category": "clinic_consultation",
+    "interest_area": "PRP",
+    "missing_details": [
+      "timeline",
+      "preferred contact",
+      "optional photos",
+      "consultation availability"
+    ],
+    "human_review_required": true,
+    "review_reason": "clinic consultation review; guarantee / outcome boundary",
+    "human_owner": "clinic consultation lead",
+    "suggested_next_step": "route to consultation review before giving advice",
+    "owner_note": "Route to clinic consultation lead. Interest area: PRP. Reason: clinic consultation review; guarantee / outcome boundary. Missing details: timeline, preferred contact, optional photos, consultation availability.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-006",
+    "source": "Website form",
+    "original_text": "I have a patchy area after SMP from another clinic. Is it suitable to fix it?",
+    "category": "clinic_consultation",
+    "interest_area": "SMP",
+    "missing_details": [
+      "timeline",
+      "preferred contact",
+      "optional photos",
+      "consultation availability"
+    ],
+    "human_review_required": true,
+    "review_reason": "clinic consultation review; suitability boundary",
+    "human_owner": "clinic consultation lead",
+    "suggested_next_step": "route to consultation review before giving advice",
+    "owner_note": "Route to clinic consultation lead. Interest area: SMP. Reason: clinic consultation review; suitability boundary. Missing details: timeline, preferred contact, optional photos, consultation availability.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-007",
+    "source": "Email",
+    "original_text": "I'm interested in a custom hair unit or hair system. How much does it cost and when can I come in?",
+    "category": "clinic_consultation",
+    "interest_area": "pricing / quote",
+    "missing_details": [
+      "timeline",
+      "preferred contact",
+      "optional photos"
+    ],
+    "human_review_required": true,
+    "review_reason": "pricing / quote requested",
+    "human_owner": "clinic consultation lead",
+    "suggested_next_step": "route to consultation review before giving advice",
+    "owner_note": "Route to clinic consultation lead. Interest area: pricing / quote. Reason: pricing / quote requested. Missing details: timeline, preferred contact, optional photos.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-008",
+    "source": "Instagram comment",
+    "original_text": "Do you treat AKN or keloid bumps at the back of the head? I need a diagnosis before I book.",
+    "category": "clinic_consultation",
+    "interest_area": "AKN",
+    "missing_details": [
+      "timeline",
+      "preferred contact",
+      "optional photos"
+    ],
+    "human_review_required": true,
+    "review_reason": "clinic consultation review; diagnosis boundary",
+    "human_owner": "clinic consultation lead",
+    "suggested_next_step": "route to consultation review before giving advice",
+    "owner_note": "Route to clinic consultation lead. Interest area: AKN. Reason: clinic consultation review; diagnosis boundary. Missing details: timeline, preferred contact, optional photos.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-009",
+    "source": "Website form",
+    "original_text": "My hair has been shedding a lot for three months. I want to understand my options.",
+    "category": "clinic_consultation",
+    "interest_area": "general hair loss",
+    "missing_details": [
+      "preferred contact",
+      "optional photos",
+      "consultation availability"
+    ],
+    "human_review_required": true,
+    "review_reason": "clinic consultation review",
+    "human_owner": "clinic consultation lead",
+    "suggested_next_step": "route to consultation review before giving advice",
+    "owner_note": "Route to clinic consultation lead. Interest area: general hair loss. Reason: clinic consultation review. Missing details: preferred contact, optional photos, consultation availability.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-010",
+    "source": "Facebook message",
+    "original_text": "Do you run SEND-friendly football sessions for a child aged 9 who gets anxious in groups?",
+    "category": "send_sports",
+    "interest_area": "age group question",
+    "missing_details": [
+      "parent/guardian contact",
+      "programme lead review"
+    ],
+    "human_review_required": true,
+    "review_reason": "SEND/support needs; programme lead review",
+    "human_owner": "SEND sports programme lead",
+    "suggested_next_step": "route to programme lead for support and safeguarding review",
+    "owner_note": "Route to SEND sports programme lead. Interest area: age group question. Reason: SEND/support needs; programme lead review. Missing details: parent/guardian contact, programme lead review.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-011",
+    "source": "Community referral",
+    "original_text": "Parent asks if a 12-year-old with autism and one-to-one support needs can join football safely.",
+    "category": "send_sports",
+    "interest_area": "age group question",
+    "missing_details": [],
+    "human_review_required": true,
+    "review_reason": "SEND/support needs; programme lead review; safeguarding-sensitive wording",
+    "human_owner": "SEND sports programme lead",
+    "suggested_next_step": "route to programme lead for support and safeguarding review",
+    "owner_note": "Route to SEND sports programme lead. Interest area: age group question. Reason: SEND/support needs; programme lead review; safeguarding-sensitive wording. Missing details: no obvious missing details.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-012",
+    "source": "Email",
+    "original_text": "My child wants to join football but there are safeguarding worries after an incident at another club. Who should I speak to?",
+    "category": "send_sports",
+    "interest_area": "general enquiry",
+    "missing_details": [
+      "child age",
+      "support needs"
+    ],
+    "human_review_required": true,
+    "review_reason": "programme lead review; safeguarding-sensitive wording",
+    "human_owner": "SEND sports programme lead",
+    "suggested_next_step": "route to programme lead for support and safeguarding review",
+    "owner_note": "Route to SEND sports programme lead. Interest area: general enquiry. Reason: programme lead review; safeguarding-sensitive wording. Missing details: child age, support needs.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  }
+]

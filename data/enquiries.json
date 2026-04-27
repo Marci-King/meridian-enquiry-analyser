@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ENQ-001",
+    "source": "Instagram DM",
+    "text": "Do you do coffee and pastries for a small event next Friday? Around 25 people."
+  },
+  {
+    "id": "ENQ-002",
+    "source": "Website form",
+    "text": "Can I book a table for four this Saturday evening at about 7pm?"
+  },
+  {
+    "id": "ENQ-003",
+    "source": "Email",
+    "text": "We need catering for a corporate lunch near Meridian House. Can I get a quote for 40 people?"
+  },
+  {
+    "id": "ENQ-004",
+    "source": "Phone note",
+    "text": "Can I order two celebration cakes and collect them on Friday morning? One needs to be gluten free."
+  },
+  {
+    "id": "ENQ-005",
+    "source": "Instagram DM",
+    "text": "I saw your PRP post for thinning hair. Can you guarantee it will work?"
+  },
+  {
+    "id": "ENQ-006",
+    "source": "Website form",
+    "text": "I have a patchy area after SMP from another clinic. Is it suitable to fix it?"
+  },
+  {
+    "id": "ENQ-007",
+    "source": "Email",
+    "text": "I'm interested in a custom hair unit or hair system. How much does it cost and when can I come in?"
+  },
+  {
+    "id": "ENQ-008",
+    "source": "Instagram comment",
+    "text": "Do you treat AKN or keloid bumps at the back of the head? I need a diagnosis before I book."
+  },
+  {
+    "id": "ENQ-009",
+    "source": "Website form",
+    "text": "My hair has been shedding a lot for three months. I want to understand my options."
+  },
+  {
+    "id": "ENQ-010",
+    "source": "Facebook message",
+    "text": "Do you run SEND-friendly football sessions for a child aged 9 who gets anxious in groups?"
+  },
+  {
+    "id": "ENQ-011",
+    "source": "Community referral",
+    "text": "Parent asks if a 12-year-old with autism and one-to-one support needs can join football safely."
+  },
+  {
+    "id": "ENQ-012",
+    "source": "Email",
+    "text": "My child wants to join football but there are safeguarding worries after an incident at another club. Who should I speak to?"
+  }
+]
