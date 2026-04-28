@@ -213,5 +213,27 @@
     "suggested_next_step": "route to programme lead for support and safeguarding review",
     "owner_note": "Route to SEND sports programme lead. Interest area: general enquiry. Reason: programme lead review; safeguarding-sensitive wording. Missing details: child age, support needs.",
     "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
+  },
+  {
+    "id": "ENQ-013",
+    "source": "Website form",
+    "original_text": "Can I order three lattes please?",
+    "category": "hospitality",
+    "interest_area": "general enquiry",
+    "missing_details": [
+      "date",
+      "time",
+      "headcount",
+      "location",
+      "contact details",
+      "collection/delivery preference",
+      "dietary requirements"
+    ],
+    "human_review_required": false,
+    "review_reason": "standard enquiry",
+    "human_owner": "hospitality owner",
+    "suggested_next_step": "confirm event or booking details before replying",
+    "owner_note": "Prepare a standard reply. Interest area: general enquiry. Missing details: date, time, headcount, location, contact details, collection/delivery preference, dietary requirements.",
+    "truth_boundary": "Static local analysis using fictional demo data only. No live model call, no real customer data, no production classifier, no clinical validation, and no safeguarding validation."
   }
 ]

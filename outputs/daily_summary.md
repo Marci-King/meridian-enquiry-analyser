@@ -1,10 +1,10 @@
-# Meridian Daily Enquiry Summary
+# Meridian Workflow Review Summary
 
-- Total enquiries: 12
-- Category breakdown: clinic_consultation (5), hospitality (4), send_sports (3)
-- Interest area breakdown: pricing / quote (2), general enquiry (2), age group question (2), event coffee (1), table booking (1), PRP (1), SMP (1), AKN (1), general hair loss (1)
+- Total enquiries: 13
+- Category breakdown: hospitality (5), clinic_consultation (5), send_sports (3)
+- Interest area breakdown: general enquiry (3), pricing / quote (2), age group question (2), event coffee (1), table booking (1), PRP (1), SMP (1), AKN (1), general hair loss (1)
 - Human review count: 9
-- Follow-up/missing details count: 11
+- Follow-up/missing details count: 12
 
 ## Human Review Required
 
@@ -58,11 +58,12 @@
 - ENQ-009: preferred contact, optional photos, consultation availability
 - ENQ-010: parent/guardian contact, programme lead review
 - ENQ-012: child age, support needs
+- ENQ-013: date, time, headcount, location, contact details, collection/delivery preference, dietary requirements
 
 ## Category Breakdown
 
+- hospitality: 5
 - clinic_consultation: 5
-- hospitality: 4
 - send_sports: 3
 
 ## Notes

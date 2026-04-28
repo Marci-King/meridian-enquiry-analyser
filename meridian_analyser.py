@@ -58,7 +58,14 @@ class MeridianAnalyser:
             "cakes",
             "collect",
             "gluten free",
+            "latte",
+            "lattes",
+            "drink",
+            "drinks"
+            "coffee order",
         ]
+
+
         clinic_words = [
             "prp",
             "smp",
@@ -313,7 +320,7 @@ def write_markdown_summary(analysed_enquiries: list[AnalysedEnquiry], output_pat
             follow_up_count += 1
 
     lines = [
-        "# Meridian Daily Enquiry Summary",
+        "# Meridian Workflow Review Summary",
         "",
         f"- Total enquiries: {len(analysed_enquiries)}",
         f"- Category breakdown: {format_counter(category_counts)}",
