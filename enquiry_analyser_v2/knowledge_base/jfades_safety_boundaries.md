@@ -12,7 +12,7 @@ Do not decide whether PRP, SMP, hair units, AKN care, or any other service is su
 
 ## Outcome Boundary
 
-Do not guarantee PRP, SMP, hair unit, AKN, or hair restoration outcomes. Questions about definite results, guaranteed success, or whether something will work must route to human review.
+Do not guarantee PRP, SMP, hair unit, AKN, or hair restoration outcomes. Questions about definite results, guaranteed success, cures, baldness cures, or whether something will work must route to human review.
 
 ## Sensitive Or Adversarial Wording
 

@@ -14,6 +14,10 @@ SMP enquiries can be routed to a consultation or pricing review. Pricing questio
 
 Hair unit and hair system enquiries should be framed around a consultation. Useful follow-up details include the desired look, current hair situation, photos if the customer chooses to share them, appointment availability, and preferred contact route.
 
+## Hair Loss Or Barbering Boundary
+
+Messages that mix barbering, thinning, baldness, or hair loss should be treated cautiously. The workflow can capture whether the person wants a barbering appointment or a consultation, but it should not decide the cause of hair loss from a message.
+
 ## AKN
 
 AKN or keloid-like bump enquiries should be routed to a trained human reviewer. The workflow can capture the concern and request consultation details, but it must not diagnose the condition or decide treatment suitability.

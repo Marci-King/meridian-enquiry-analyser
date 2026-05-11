@@ -4,10 +4,10 @@ Deterministic proof evals using fictional cases only.
 
 ## Results
 
-- Total cases: 7
-- Category accuracy: 7/7 (100.0%)
-- Human-review trigger accuracy: 7/7 (100.0%)
-- Retrieval-review accuracy: 7/7 (100.0%)
+- Total cases: 12
+- Category accuracy: 12/12 (100.0%)
+- Human-review trigger accuracy: 12/12 (100.0%)
+- Retrieval-review accuracy: 12/12 (100.0%)
 
 ## Expected vs Actual
 
@@ -20,6 +20,11 @@ Deterministic proof evals using fictional cases only.
 | EVAL-005 | cosy_mug_opening_hours | cosy_mug_opening_hours | False | False | True / high | True / high | True |
 | EVAL-006 | general | general | True | True | False / low | False / low | True |
 | EVAL-007 | cosy_mug_catering | cosy_mug_catering | False | False | True / high | True / high | True |
+| EVAL-008 | jfades_prp | jfades_prp | True | True | True / high | True / high | True |
+| EVAL-009 | jfades_hair_loss | jfades_hair_loss | True | True | True / high | True / high | True |
+| EVAL-010 | jfades_akn | jfades_akn | True | True | True / high | True / high | True |
+| EVAL-011 | cosy_mug_catering | cosy_mug_catering | False | False | True / high | True / high | True |
+| EVAL-012 | cosy_mug_delivery_collection | cosy_mug_delivery_collection | False | False | True / high | True / high | True |
 
 ## Known Limitations
 

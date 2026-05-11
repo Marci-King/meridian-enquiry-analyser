@@ -15,9 +15,9 @@ python3 enquiry_analyser_v2/evals/run_evals.py
 
 Expected eval result:
 
-- 7/7 category accuracy
-- 7/7 human-review trigger accuracy
-- 7/7 retrieval-review accuracy
+- 12/12 category accuracy
+- 12/12 human-review trigger accuracy
+- 12/12 retrieval-review accuracy
 
 ## Workflow
 
@@ -34,6 +34,8 @@ Fictional enquiry
 
 Meridian V2 is not just an enquiry classifier. It demonstrates the bounded workflow pattern behind Meridian and Aegis: retrieve relevant guidance, structure messy input, identify risk and missing details, and route sensitive cases to human review rather than confident autonomous closure.
 
+The workflow is fail-closed: if guidance is missing, retrieval quality is low, or the enquiry is sensitive, it routes to human review rather than confident closure.
+
 ## Relationship To Aegis
 
 Meridian is the lower-stakes proving ground for bounded AI workflows. It tests retrieval-grounded guidance, missing-detail capture, structured outputs, safer drafts, follow-up routing, and human review. Aegis applies the same accountability logic to higher-stakes operational environments where sign-off, auditability, and fail-closed review become more critical.
@@ -43,6 +45,7 @@ Meridian is the lower-stakes proving ground for bounded AI workflows. It tests r
 - Local retrieval over markdown guidance
 - Structured JSON workflow outputs
 - Deterministic evals
+- Lightweight adversarial evals
 - Retrieval-quality review
 - Audit metadata
 - Safety-boundary documentation
@@ -63,7 +66,7 @@ Meridian is the lower-stakes proving ground for bounded AI workflows. It tests r
 
 - Fictional data only
 - No real customer data
-- No live model calls
+- No live AI, model, or API calls
 - No production RAG claim
 - No clinical validation
 - No production classifier
@@ -77,6 +80,8 @@ Meridian is the lower-stakes proving ground for bounded AI workflows. It tests r
 - `v2_analyser.py` writes structured JSON to `outputs/analysed_enquiries_v2.json` and a reviewer-facing Markdown summary to `outputs/daily_summary_v2.md`.
 - `evals/run_evals.py` writes a deterministic report to `evals/eval_report.md`.
 - `retrieval_review` records whether guidance was found, assigns `low`, `medium`, or `high` confidence, and explains why the retrieved guidance was sufficient or insufficient.
+- Each JSON item includes `metadata` with analyser version, retrieval mode, live-model status, fictional-data status, and whether a safety boundary was hit.
+- `ARCHITECTURAL_STATE_MACHINE.md` documents the proof workflow from fictional enquiry through deterministic eval report.
 
 ## Human-Review Gates
 

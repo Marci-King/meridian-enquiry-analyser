@@ -36,7 +36,17 @@ def classify_service_category(business: str, message: str) -> str:
 
     if "jfades" in clean_business or contains_any(
         clean_message,
-        [r"\bprp\b", r"\bsmp\b", r"\bakn\b", r"\bhair unit\b", r"\bhair system\b", r"\bkeloid\b"],
+        [
+            r"\bprp\b",
+            r"\bsmp\b",
+            r"\bakn\b",
+            r"\bhair unit\b",
+            r"\bhair system\b",
+            r"\bkeloid\b",
+            r"\bhair loss\b",
+            r"\bthinning\b",
+            r"\bbaldness\b",
+        ],
     ):
         if re.search(r"\bprp\b", clean_message):
             return "jfades_prp"
@@ -46,6 +56,8 @@ def classify_service_category(business: str, message: str) -> str:
             return "jfades_akn"
         if re.search(r"\b(hair unit|hair system)\b", clean_message):
             return "jfades_hair_unit"
+        if re.search(r"\b(hair loss|thinning|baldness)\b", clean_message):
+            return "jfades_hair_loss"
         return "jfades_general"
 
     if "cosy mug" in clean_business or contains_any(
@@ -80,6 +92,7 @@ def detect_risk_flags(business: str, service_category: str, message: str) -> lis
         "diagnosis_request": [r"\bdiagnos(e|is|ing)\b"],
         "suitability_request": [r"\b(suitable|suitability)\b"],
         "outcome_guarantee_request": [r"\b(definitely work|guarantee|guaranteed|guarantees|will work)\b"],
+        "unsupported_cure_claim": [r"\b(cure|cures|cured|baldness)\b"],
         "pricing_or_quote_request": [r"\b(price|pricing|cost|quote|how much)\b"],
     }
 
@@ -96,6 +109,7 @@ def detect_risk_flags(business: str, service_category: str, message: str) -> lis
             "diagnosis_request",
             "suitability_request",
             "outcome_guarantee_request",
+            "unsupported_cure_claim",
             "pricing_or_quote_request",
         ]
     ):
@@ -211,6 +225,32 @@ def recommend_next_step(
     return "Prepare a standard owner-approved response using the retrieved local guidance."
 
 
+def build_metadata(
+    service_category: str,
+    risk_flags: list[str],
+    retrieval_review: dict[str, object],
+    human_review_required: bool,
+) -> dict[str, object]:
+    """Attach audit metadata that makes proof boundaries explicit."""
+    safety_boundary_hit = (
+        human_review_required
+        and (
+            service_category.startswith("jfades")
+            or retrieval_review["guidance_found"] is False
+            or retrieval_review["retrieval_confidence"] == "low"
+            or bool(risk_flags)
+        )
+    )
+
+    return {
+        "analyser_version": "Meridian-Enquiry-Analyser-V2",
+        "retrieval_mode": "local_keyword_overlap",
+        "live_model_used": False,
+        "fictional_data": True,
+        "safety_boundary_hit": safety_boundary_hit,
+    }
+
+
 def analyse_enquiry(enquiry: dict[str, str], retriever: KeywordGuidanceRetriever | None = None) -> dict[str, object]:
     """Analyse one fictional enquiry into a structured V2 proof output."""
     retriever = retriever or KeywordGuidanceRetriever()
@@ -235,9 +275,16 @@ def analyse_enquiry(enquiry: dict[str, str], retriever: KeywordGuidanceRetriever
         retrieval_review,
         human_review_required,
     )
+    metadata = build_metadata(
+        service_category,
+        risk_flags,
+        retrieval_review,
+        human_review_required,
+    )
 
     return {
         "enquiry_id": enquiry["enquiry_id"],
+        "metadata": metadata,
         "business": business,
         "message": message,
         "service_category": service_category,
