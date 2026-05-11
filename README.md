@@ -6,6 +6,37 @@ This small Python project takes fictional service enquiries and turns them into 
 
 It is designed to be easy to read and change while learning Python.
 
+## V2 Proof Artifact
+
+A newer proof layer is available in `enquiry_analyser_v2/`.
+
+Meridian Enquiry Analyser V2 demonstrates:
+
+- local markdown-guided retrieval
+- retrieval-quality review
+- structured JSON outputs
+- deterministic evals
+- lightweight adversarial cases
+- audit metadata
+- standard-library schema contracts
+- standard-library unit tests
+- safety/failure documentation
+- human-review routing
+
+Start here:
+
+```text
+enquiry_analyser_v2/README_V2_PROOF.md
+```
+
+Quick proof:
+
+```bash
+python3 enquiry_analyser_v2/v2_analyser.py
+python3 enquiry_analyser_v2/evals/run_evals.py
+python3 -m unittest discover -s enquiry_analyser_v2/tests
+```
+
 ## Why This Exists
 
 This proof artefact supports the Meridian story by showing a simple Python-based workflow analysis layer.
