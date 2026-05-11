@@ -11,6 +11,7 @@ Run:
 ```bash
 python3 enquiry_analyser_v2/v2_analyser.py
 python3 enquiry_analyser_v2/evals/run_evals.py
+python3 -m unittest discover -s enquiry_analyser_v2/tests
 ```
 
 Expected eval result:
@@ -18,6 +19,7 @@ Expected eval result:
 - 12/12 category accuracy
 - 12/12 human-review trigger accuracy
 - 12/12 retrieval-review accuracy
+- Unit tests pass with standard-library `unittest`
 
 ## Workflow
 
@@ -82,6 +84,14 @@ Meridian is the lower-stakes proving ground for bounded AI workflows. It tests r
 - `retrieval_review` records whether guidance was found, assigns `low`, `medium`, or `high` confidence, and explains why the retrieved guidance was sufficient or insufficient.
 - Each JSON item includes `metadata` with analyser version, retrieval mode, live-model status, fictional-data status, and whether a safety boundary was hit.
 - `ARCHITECTURAL_STATE_MACHINE.md` documents the proof workflow from fictional enquiry through deterministic eval report.
+
+## Engineering Discipline
+
+- `schemas.py` documents the structured output contract with standard-library `TypedDict` definitions.
+- `tests/test_v2_analyser.py` provides standard-library unit tests for routing, retrieval, safety flags, and metadata.
+- The deterministic eval suite checks category routing, human-review triggers, retrieval review, and lightweight adversarial cases.
+- Metadata-rich outputs support auditability without adding fake runtime measures.
+- The architecture remains bounded, local, inspectable, and fail-closed for sensitive or low-confidence cases.
 
 ## Human-Review Gates
 

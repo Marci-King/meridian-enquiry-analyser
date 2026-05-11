@@ -13,6 +13,7 @@ Fictional enquiry
 -> human-review decision
 -> structured JSON + Markdown output
 -> deterministic eval report
+-> unit tests / schema checks
 ```
 
 ## Fail-Closed Principle
@@ -179,7 +180,7 @@ Output fields include:
 - `human_review_required`
 - `recommended_next_step`
 
-### 8. Eval Report
+### 8. Eval Report And Engineering Checks
 
 What it does:
 
@@ -187,10 +188,12 @@ What it does:
 - Checks category routing, human-review triggers, and retrieval-review behaviour.
 - Includes lightweight adversarial cases for prompt-injection-like wording and boundary-sensitive clinic enquiries.
 - Writes `evals/eval_report.md`.
+- Runs standard-library unit tests for routing, retrieval, safety flags, and metadata consistency.
+- Uses `schemas.py` to document the structured output contract.
 
 Movement trigger:
 
-- The eval report is the review checkpoint for this proof artifact.
+- The eval report, unit tests, and schema contract are the review checkpoints for this proof artifact.
 
 Human-review trigger coverage:
 
